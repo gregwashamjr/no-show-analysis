@@ -1,0 +1,2 @@
+SELECT * FROM v_tableau_appointment_data_v2
+ORDER BY patient_no_show_total DESC
