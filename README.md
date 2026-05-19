@@ -87,7 +87,7 @@ A critical insight emerged from the SMS reminder analysis: only 25.6% of patient
 
 # Schedule Lead Time "Danger Zone"
 <p align="center">
-  <img src="images/Intervention-Priority.png" alt="Lead Time Danger Zone heatmap" width="800">
+  <img src="Images/Intervention-Priority.png" alt="Lead Time Danger Zone heatmap" width="800">
 </p>
 
 
