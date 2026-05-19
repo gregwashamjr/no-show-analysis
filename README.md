@@ -78,7 +78,7 @@ The analysis identified the 18–29 age bracket as the primary driver of missed 
 # The "Reminder Gap": Impact of SMS on scheduling compliance
 <p align="center">
   <img src="Images/sms-received.png" alt="SMS Received Amongst No-Shows" width="800">
-  <img src="Images/sms.png" alt="SMS Received by Lead Time" width="800">
+  <img src="Images/SMS.png" alt="SMS Received by Lead Time" width="800">
 </p>
 
 A critical insight emerged from the SMS reminder analysis: only 25.6% of patients received SMS reminders, while 56.2% of patients who missed their appointments did not receive a reminder. This suggests that SMS reminders may play an important role in reducing no-show rates. Additionally, a consistent behavioral pattern was observed across both groups—patients who received reminders and those who did not—as no-show rates generally increased as appointment lead time increased. Interestingly, this trend reversed after approximately 60 days, where no-show rates began to decline slightly. These findings suggest that both reminder systems and scheduling lead time influence patient attendance behavior.
