@@ -63,68 +63,62 @@ Schedule Lead Time "Danger Zone": No show rates significantly increase after at 
 [View on Tableau Public](https://public.tableau.com/app/profile/greg.washam/viz/NoShowAnalysis_17785967473760/Dashboard1)
 
 ## 📸 Dashboard Preview
-![Dashboard Preview](images/Patient%20No-Show%20Analysis(1).png)
+![Dashboard Preview](Images/no-show-dashboard.png)
 
 ## 🔍 Detailed Insights
 
 # High-Risk No-Show Age Bracket
+
 <p align="center">
-  <img src="images/No-Show By age.png" alt="No-Show Age Risk Bar Chart" width="800">
+  <img src="Images/no-show-by-age.png" alt="No-Show Age Risk Bar Chart" width="800">
 </p>
 
 The analysis identified the 18–29 age bracket as the primary driver of missed appointments across all patient groups. While the clinic’s overall no-show rate was 19.5%, patients between the ages of 18 and 29 demonstrated a significantly higher no-show rate of 24.6%. This finding suggests that younger adult patients may face greater scheduling conflicts, inconsistent routines, or lower engagement with appointment adherence, making them a high-risk segment for targeted reminder systems and attendance intervention strategies.
 
 # The "Reminder Gap": Impact of SMS on scheduling compliance
 <p align="center">
-  <img src="images/sms received.png" alt="SMS Received Amongst No-Shows" width="800">
-  <img src="images/SMS.png" alt="SMS Received by Lead Time" width="800">
+  <img src="Images/sms-received.png" alt="SMS Received Amongst No-Shows" width="800">
+  <img src="Images/sms.png" alt="SMS Received by Lead Time" width="800">
 </p>
 
 A critical insight emerged from the SMS reminder analysis: only 25.6% of patients received SMS reminders, while 56.2% of patients who missed their appointments did not receive a reminder. This suggests that SMS reminders may play an important role in reducing no-show rates. Additionally, a consistent behavioral pattern was observed across both groups—patients who received reminders and those who did not—as no-show rates generally increased as appointment lead time increased. Interestingly, this trend reversed after approximately 60 days, where no-show rates began to decline slightly. These findings suggest that both reminder systems and scheduling lead time influence patient attendance behavior.
 
-# Specialty Benchmarking: Cardiology vs. General Care
+# Schedule Lead Time "Danger Zone"
 <p align="center">
-  <img src="visualizations/Efficiency vs Risk.png" alt="Efficiency vs Risk Scatter plot" width="800">
+  <img src="images/Intervention-Priority.png" alt="Lead Time Danger Zone heatmap" width="800">
 </p>
 
 
-By benchmarking clinical specialties, the data reveals that Cardiology consistently maintains readmission rates below the hospital average, even when treating high-risk patients. This high performance suggests that the specialized discharge and follow-up protocols used in Cardiology could potentially be modeled and scaled to other departments to lower the overall hospital-wide readmission rate.
+A clear risk threshold emerged when analyzing appointment scheduling lead time. No-show rates remain relatively stable at shorter lead times but begin to increase significantly once appointments are scheduled 15 or more days in advance. This suggests that longer gaps between booking and appointment date may reduce patient engagement or increase the likelihood of forgetting or deprioritizing the visit.
+
+A more concentrated pattern is observed among repeat no-show behavior. The majority of “one-time offenders” (approximately 80%) who missed their appointments were associated with long scheduling windows between 90 and 180 days. This indicates that extremely long lead times may disproportionately contribute to isolated no-show events, potentially due to reduced perceived urgency or changes in patient circumstances over time. Together, these findings highlight schedule lead time as a key operational lever for reducing missed appointments and improving overall attendance reliability.
 
 ---
 
 ## 💡 Recommendations
 
-To reduce the 15% risk identified in the "Treatment Gap," the hospital should implement a mandatory medication review for all diabetic patients prior to discharge, specifically targeting those whose prescriptions remained unchanged during their stay.
+- Increase SMS Enrollment: Expand patient enrollment in SMS reminders during scheduling and check-in to improve reminder coverage and reduce missed appointments.
+
+- Reduce Long Lead Times: Minimize appointment scheduling gaps where possible, as no-show risk increases significantly after 15+ days.
+
+- Target High-Risk Appointments: Apply additional reminders or confirmation outreach for appointments scheduled 90–180 days in advance.
+
+- Focus on Younger Patients: Develop communication strategies for patients aged 18–29, the highest-risk no-show demographic.
+
+- Monitor Trends Continuously: Track no-show rates, reminder effectiveness, and scheduling trends through ongoing dashboard reporting.
 
 ---
 
 ## 📈 Business Impact
-### Financial Impact: Penalties & Cost Savings
+### Financial Impact: Cost Saving and Revenue Opportunities
 
-Hospital readmissions are expensive. Under the Hospital Readmission Reduction Program (HRRP), the government (CMS)  penalizes hospitals by reducing their overall payments if their readmission rates are too high.
-
+Reducing patient no-shows can improve both operational efficiency and financial performance for healthcare organizations. Missed appointments create gaps in provider schedules that result in lost revenue opportunities while also increasing administrative workload through follow-up calls, rescheduling efforts, and provider notifications. Improving appointment attendance allows clinics to maximize provider utilization, reduce wasted scheduling capacity, and allocate staff time more efficiently toward patient care and other revenue-generating activities.
     
 
-### Clinical Excellence: Closing the "Treatment Gap"
+### Clinical Impact: Improving Patient Outcomes
 
-Finding that diabetic patients with no medication changes have a 15% readmission risk is a major red flag for the clinical team. This suggests that the current "standard of care" for some patients is too passive.
+Reducing patient no-show rates can lead to improved clinical outcomes by increasing continuity of care and treatment adherence. When patients attend scheduled follow-up appointments and remain engaged with physician recommendations, providers are better able to monitor conditions, adjust treatment plans, and identify health concerns earlier. Improved appointment adherence may ultimately contribute to better long-term patient outcomes and stronger overall quality of care.
 
-
-### Resource Optimization & Strategy
-
-Hospitals have limited beds and staff. Every "preventable" readmission takes away a bed from a new patient who needs it.
-
-   ---
-
-## 🔑 Why This Matter
-
-1. Identifying a 13.1% readmission risk points to where the hospital is losing money through federal penaltis.
-2. Treating a patient a second time for the same issue often costs more than the initial stay, as the patient’s condition may have worsened.
-3. Implementing a policy to require a medication review for all diabetic patients could directly save lives and prevent the physical and emotional stress of a patient having to return to the ER just days after being discharged.
-4. Operational efficiency can be improved. The hospital can study what Cardiology is doing differently and apply those discharge protocols to the higher-risk Diabetes units. 
----
-
-### Analyst Note: This analysis provides a roadmap for reducing federal penalties and improving patient health outcomes by targeting high-risk diabetic medication protocols.
 
 ---
 
@@ -137,8 +131,7 @@ Hospitals have limited beds and staff. Every "preventable" readmission takes awa
 
 
 ## ⚠️ Challenges
-- Large dataset: Utilized PostgreSQL to efficiently handle 100,000+ entries
-- Missing specialist data: Categorized the missing data as "other" or "Unknown" to avoid skewing the specialty benchmarking
+- Large dataset: Utilized PostgreSQL to efficiently handle 300,000+ entries
 
 ---
 
