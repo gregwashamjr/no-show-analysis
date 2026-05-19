@@ -1,10 +1,12 @@
 # Identifying Drivers of Missed Medical Appointments 
 
 ## 🚀 Executive Summary
+
 This project is a healthcare analytics project analyzing patient appointment behavior to uncover operational, demographic, and scheduling factors associated with higher no-show rates using PostgreSQL and Tableau. 
 ---
 
 ## 📌 Business Problem
+
 Missed appointments (“no-shows”) create significant operational and financial inefficiencies for healthcare providers by reducing revenue, underutilizing clinical resources, and limiting access for other patients. These missed visits are driven by multiple factors such as patient demographics, scheduling lead time, and prior attendance behavior, making it difficult for organizations to proactively address the issue without data-driven insight. The core business problem is identifying the key drivers of patient no-shows so healthcare administrators can predict high-risk appointments, implement targeted interventions, and ultimately improve appointment attendance rates and overall clinic efficiency.
 
 ---
